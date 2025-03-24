@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 2rem;
+    background: linear-gradient(to bottom, antiquewhite, black);
+    padding: 4rem;
+}
+
+.cards{
+    height: 85vh;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    list-style: none;
+    background-color: antiquewhite;
+    gap: 2rem;
+}
+
+.card{
+    background-color: black;
+}
+ 
+.card{
+    background-color: grey;
+    list-style: none;
+    border-radius: 5rem;
+    box-shadow: 0 2rem 5rem 0 rgba(0,0,0,0.2);
+}
+ 
+.card--age{
+    grid-row: 1/7;
+    grid-column: 1/5;
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
+}
+.card--age > input{
+    width: 70%;
+    height: 4rem;
+    font-size: 2rem;
+    font-family: sans-serif;
+
+}
+ 
+.card--agemini{
+    grid-column:5/13;
+    grid-row: 1/9;
+ 
+}
+ 
+.card--pokemon{
+    grid-row: 7/13;
+    grid-column: 2/5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+ 
+}
+ 
+.card--pokemon > img{
+    width: 80%;
+    height: 80%;
+ 
+    object-fit: contain;
+}
+ 
+.card--pokemon > button{
+width: 15rem;
+height: 6rem;
+font-size: 2rem;
+font-family: sans-serif;
+border: none;
+background: green;
+color: grey;
+border-radius: 0.5rem;
+}
+ 
+@media screen and (max-width:87.5rem){
+ 
+    .card--agemini{
+        grid-row: 1/13;
+    }
+ 
+    .card--pokemon{
+        grid-column: 1/5;;
+    }
+   
+}
+ 
+ 
+@media screen and (max-width:62.5rem){
+ 
+    .card--age,.card--agemini{
+        display: none;
+    }
+ 
+    .card--pokemon{
+        grid-row: 1/13;
+        grid-column: 1/13;
+    }
+ 
+}
